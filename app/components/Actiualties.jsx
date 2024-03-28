@@ -14,7 +14,7 @@ top-[40px] xs:top-[40px] sm:top-[50px] md:top-[70px] tracking-[5px] px-[5px]">
 <div className=" flex flex-col md:flex-row    justify-between items-start mt-[20px] xs:mt-[25px] sm:mt-[50px] ">
     
     <div className="flex w-full md:w-[48%]   mx-auto  bg-blue-300 relative rounded-sm align-middle">
-        <Image src={m4}   className=" w-full object-cover h-full md:aspect-square "/>
+        <Image src={m4} alt=""  className=" w-full object-cover h-full md:aspect-square "/>
     </div>
     <div className="flex flex-col w-full md:w-[48%] mx-auto justify-start   relative">
         

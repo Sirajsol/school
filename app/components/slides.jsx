@@ -56,7 +56,7 @@ useEffect(()=>{
   
     </div>
     <div className='flex w-[30%] xs:w-[25%] ml-[40%] mt-[40%] absolute justify-between items-center'>
-   {mm.map((m,index)=>{return <div className={`h-[15px] w-[15px] sm:h-[30px] sm:w-[30px]
+   {mm.map((m,index)=>{return <div key={index} className={`h-[15px] w-[15px] sm:h-[30px] sm:w-[30px]
     rounded-full border-[2px] ${current==index?'bg-white':'bg-transparent'}`}
     onClick={()=>{setCurrent(index)}}
    ></div>})
