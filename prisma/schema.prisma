@@ -1,0 +1,103 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider        = "prisma-client-js"
+}
+
+
+model User {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  hashedPassword String?
+  createdAt DateTime @default(now())
+updatedAt DateTime @updatedAt
+role Role @default(EMPLOYEE)
+  
+
+}
+
+
+// model Classs {
+//   id            String    @id @default(auto()) @map("_id") @db.ObjectId
+//   name          String?
+  
+  
+
+// }
+// model Student{
+//   id String @id @default(auto()) @map("_id") @db.ObjectId
+//   name String @unique
+  
+// }
+// model Teacher{
+//   id String    @id @default(auto()) @map("_id") @db.ObjectId
+//   name String
+
+//   // place Place? @relation(fields: [placeId], references: [name])
+
+//   // @@unique([placeId,date])
+// }
+
+// model Emplyee{
+//    id String @id  @default(auto()) @map("_id") @db.ObjectId
+//    name String @unique
+  
+// }
+
+
+// model Course{
+//   id String @id @default(auto()) @map("_id") @db.ObjectId
+
+//   name String @unique
+  
+// //  img String
+// //   event Event[]
+// //   chairs Chair[] 
+ 
+ 
+
+
+// }
+// model Exam{
+//   id String @id  @default(auto()) @map("_id") @db.ObjectId
+ 
+
+//   createdDate DateTime @default(now())
+// //   category personCat @relation(fields: [categoryId],references: [title])
+// //  chair Chair? @relation(fields: [chairId],references: [id])
+// //   event Event @relation(fields: [eventId],references: [title],onDelete:Cascade)
+//   // @@unique([eventId,chairId])
+// }
+
+// model Result{
+//   id String @id  @default(auto()) @map("_id") @db.ObjectId
+  
+  
+//   // category ChairCategory @relation(fields: [catId],references: [title],onDelete:Cascade)
+  
+  
+//   // place Place @relation(fields: [placeId],references: [name],onDelete:Cascade)
+//   // @@unique([title,placeId])
+ 
+// }
+model Section{
+    id String @id  @default(auto()) @map("_id") @db.ObjectId
+    title String
+    img String
+    content String
+}
+
+
+
+enum Role{
+  EMPLOYEE
+  TEACHER
+  STUDENT
+  ADMIN
+}
