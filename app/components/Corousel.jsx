@@ -153,6 +153,6 @@ const Corousel = () => {
 //   </button>
 // </div>
 //   );
-// };
+};
 
 export default Corousel;
