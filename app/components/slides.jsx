@@ -38,11 +38,11 @@ useEffect(()=>{
      style={{transform:`translateX(-${current*100}%)`}}
     >
  {mm.map((m,index)=>{
-    return( <div className='flex w-full h-full  items-center flex-col ' 
+    return( <div key={index} className='flex w-full h-full  items-center flex-col ' 
   
     >
     <div className='flex w-screen h-[250px] xs:h-[300px] sm:h-[500px] md:h-[800px] relative border-[1px]'>
-<Image src={mm[index].im}  className='w-full h-full object-cover opacity-100 transition duration-300 aspect-square'/>
+<Image src={mm[index].im} alt='' className='w-full h-full object-cover opacity-100 transition duration-300 aspect-square'/>
 
     </div>
     <h3 className=' flex absolute text-[40px] 

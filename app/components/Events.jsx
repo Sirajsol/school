@@ -28,7 +28,7 @@ const Events = () => {
             <div className="flex flex-col  sm:w-[49%] ">
                 <div className=" flex w-full  "> <label className="border-b-[1px] border-black ">VUE AGENDA</label></div>
                 <div className=" flex justify-start items-start mt-[10px] w-full sm:w-[80%] sm:mx-auto  border-[1px]  ">
-                    <Image src={m3} className="w-full h-full object-cover rounded-sm xs:min-h-[300px]
+                    <Image src={m3} alt="" className="w-full h-full object-cover rounded-sm xs:min-h-[300px]
                     cursor-pointer transition duration-300
                     hover:scale-105
                     hover:shadow-lg hover:shadow-black"/>

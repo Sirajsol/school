@@ -87,11 +87,11 @@ const   Calender= () => {
         {/* {calen()} */}
 {days.map((day,index)=>{
    
-    return<div className="flex flex-col justify-center mx-[1%] w-[10.5%]">
-        <div className=" flex  text-blue-400 font-bold text-[10px] xs:text-[10px] sm:text-[12px]">{day}</div>
+    return<div key={index} className="flex flex-col justify-center mx-[1%] w-[10.5%]">
+        <div  className=" flex  text-blue-400 font-bold text-[10px] xs:text-[10px] sm:text-[12px]">{day}</div>
         {dd.map(d=>{
             if(d.day==index){
-                return<div className={`flex relative text-center border-b-[1px] border-white m-[3px]
+                return<div key={index+9} className={`flex relative text-center border-b-[1px] border-white m-[3px]
                  ${(d.day==new Date().getDay() && (d.date==new Date().getDate()))?'text-yellow-400':'text-white'}`}>
                     {d.date}
                     <div className={` absolute w-[25px] h-[25px] rounded-full left-[-5px] border-yellow-300 border-[2px]
