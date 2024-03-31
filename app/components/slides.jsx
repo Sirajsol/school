@@ -43,8 +43,15 @@ useEffect(()=>{
     >
     <div className='flex w-screen h-[250px] xs:h-[300px] sm:h-[500px] md:h-[800px] relative border-[1px]'>
 <Image src={mm[index].im} alt='' className='w-full h-full object-cover opacity-100 transition duration-300 aspect-square'/>
-
+<div className='flex w-screen h-[250px] xs:h-[300px] sm:h-[500px] md:h-[800px] absolute opacity-50 bg-blue-500 left-[0px] top-[0px]'></div>
     </div>
+    <div className='flex absolute w-[80%] h-[50%]  top-[5%] '>
+       <div className='flex  w-full h-full  relative  '>
+<Image src={mm[index].im} alt='' className='w-full h-full object-contain shadow-white shadow-lg opacity-100 transition duration-300 aspect-square'/>
+
+    </div> 
+    </div>
+    
     <h3 className=' flex absolute text-[40px] 
     top-[60%] tracking-[5px] font-serif font-[700] text-white 
     '>{mm[index].desc}{current}</h3>

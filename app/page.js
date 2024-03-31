@@ -6,8 +6,9 @@ import Establishments from "./components/Establishment";
 import Actualities from "./components/Actiualties";
 import Calender from "./components/Calender";
 import Events from "./components/Events";
-
+import { unstable_noStore as noStore } from "next/cache";
 export default function Home() {
+  noStore()
   return (
   
    <div className="flex flex-col">
